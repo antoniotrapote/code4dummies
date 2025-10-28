@@ -26,24 +26,23 @@ git pull origin main
 
 ### 2. Create branch **and** worktree in one step
 ```bash
-git worktree add ../new-folder -b new/branch-name
+git worktree add ../worktree -b new/branch-name
 ```
-
 📌 This does:
-- Creates the `../new-folder` folder
-- Creates a **new local branch** called `new/branch-name` based on the current `main`
+- Creates the `../worktree` folder
+- `-b` :Creates a **new local branch** called `new/branch-name` based on the current `main`
 - Leaves it **ready to work** inside the new worktree
 
 If the branch already existed locally, omit `-b`:
 ```bash
-git worktree add ../new-folder new/branch-name
+git worktree add ../worktree new/branch-name
 ```
 
 ---
 
 ### 3. Enter the worktree and publish the branch to remote
 ```bash
-cd ../new-folder
+cd ../worktree
 git status     # should say: On branch new/branch-name
 git push -u origin new/branch-name
 ```
@@ -87,45 +86,82 @@ git push
 ```
 
 ### Bring changes from `main`
+
+**Scenario**: You're on your branch, and `main` has new commits you need.
+
+#### Step 1: Update your local copy of `main`
 ```bash
-# update from remote
-git fetch origin 
+git fetch origin
+```
+This downloads the latest `main` from GitHub (doesn't change your current branch).
 
-# rebase: replays your commits on top of main
-git rebase origin/main 
+---
 
-# merge: creates a merge commit
+#### Step 2: Choose one approach
+
+**Option A — Rebase (linear history, cleaner):**
+```bash
+git rebase origin/main
+```
+- Replays your commits **on top of** the latest `main`
+- Result: straight line of commits (no merge commit)
+- Use this if you want a clean history
+- ⚠️ Rewrites your commit hashes
+
+**Option B — Merge (preserves history):**
+```bash
 git merge origin/main
+```
+- Creates a **merge commit** combining both histories
+- Result: shows that you merged `main` in
+- Use this if you prefer safety and clarity
+- Keeps your commits unchanged
 
-# force-with-lease: safer force push if history was rewritten
+---
+
+#### Step 3: If you used rebase, push with `--force-with-lease`
+```bash
 git push --force-with-lease
 ```
+- Safer than `--force` (won't overwrite others' changes)
+- Use this only after rebase (because rebase rewrites history)
+- ❌ Don't use with merge (just use `git push`)
 
 ---
 
 ## 🔀 Create and merge a Pull Request (PR)
 
 ```bash
+cd /project/directory/path/worktree-1
 gh pr create -f -t "Pull Request Title" -b "Adds --explanation about the changes"
-gh pr merge --squash --delete-branch
 ```
+- `-f` : skips interactive mode, uses current branch
+- `-t` : PR title
+- `-b` : PR description/body
+```bash
+gh pr merge --delete-branch
+```
+- `--delete-branch` : removes the remote branch after merging
+- `--squash` (optional) : creates a single commit on `main` (omit to preserve all commits)
 
 ---
 
-## 🧹 Cleanup when you're done
+## 🧹 Update main and cleanup when you're done
 
 From the main repo:
 ```bash
 cd /path/to/main-local-repo
+# 1. update main 
+git pull origin main
 
-# 1. Remove folder and link
-git worktree remove ../branch-folder
+# 2. Remove folder and link
+git worktree remove ../worktree
   
-# 2. Delete local branch  
-git branch -d new/branch
+# 3. Delete local branch  
+git branch -d local/branch
 
-# 3. Delete remote branch (optional)          
-git push origin --delete feat/cli-flags         
+# 4. Delete remote branch (optional)          
+git push origin --delete remote/branch         
 ```
 
 ---
