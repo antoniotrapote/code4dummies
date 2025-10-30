@@ -1,4 +1,4 @@
-## 2. Issues
+## 2. Manage Issues with GitHub CLI
 
 ### 2.1. Create a new issue
 ```bash

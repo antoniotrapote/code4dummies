@@ -76,4 +76,4 @@ man ls                                 # manual del comando ls
 ```
 
 ---
-CC-BY-4.0 &copy; 2025 | [Antonio L. Martínez Trapote](https://github.com/antoniotrapote) 
+CC-BY-NC-4.0 &copy; 2025 | [Antonio L. Martínez Trapote](https://github.com/antoniotrapote) 

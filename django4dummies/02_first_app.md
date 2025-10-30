@@ -36,3 +36,6 @@ myapp/
 ├── tests.py         # tests for the app
 └── views.py         # view functions for the app
 ```
+
+---
+CC-BY-NC-4.0 &copy; 2025 | [Antonio L. Martínez Trapote](https://github.com/antoniotrapote) 

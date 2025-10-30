@@ -1,5 +1,4 @@
-# Viewing Git Logs from Terminal
-
+# Log Inspection Cheat Sheet
 When you run `git log`, Git opens a **pager** (usually `less`) to let you scroll through your commits.  
 While in this mode, the terminal behaves like a text viewer — not like a command prompt.
 
@@ -61,4 +60,4 @@ git show <commit_hash>:path/to/file.ext
 ```
 
 ---
-CC-BY-4.0 &copy; 2025 | [Antonio L. Martínez Trapote](https://github.com/antoniotrapote) 
+CC-BY-NC-4.0 &copy; 2025 | [Antonio L. Martínez Trapote](https://github.com/antoniotrapote) 
