@@ -1,4 +1,4 @@
-## 🚀 Start a Django project
+# 🚀 Start a Django project
 
 To create an app with Django, follow these steps:
 1. **Navigate to your project directory**: Open your terminal and move to the folder where you want to create your project.

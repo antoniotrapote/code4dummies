@@ -21,11 +21,39 @@ To create a Django app, follow these steps:
 4. **Create a view**: Open the `views.py` file in your app directory (e.g., `myapp/views.py`) and create a simple view function.
     ```python
     from django.http import HttpResponse
+    def index(request):
+        return HttpResponse("Hello, welcome to my first app!")
+    ```
 
+5. **Map the view to a URL**: Create a new file called `urls.py` in your app directory (e.g., `myapp/urls.py`) and map the view to a URL.
+    ```python
+    from django.urls import path
+    from . import views
+    urlpatterns = [
+        path('', views.index, name='index'),
+    ]
+    ```
+
+6. **Include the app URLs in the project**: Open the `urls.py` file in your project directory (e.g., `myproject/urls.py`) and include the app's URLs.
+    ```python
+    from django.contrib import admin
+    from django.urls import include, path
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('myapp/', include('myapp.urls')),
+    ]
+    ```
+
+7. **Run the development server**: Start the development server to test your app.
+    ```bash
+    python manage.py runserver
+    ``` 
+
+8. **Access the app**: Open your web browser and go to `http://127.0.0.1:8000/myapp/` to see your first Django app in action. You should see the message "Hello, welcome to my first app!".
 
 ---
 
-## App Structure
+## App Structure
 ```bash
 myapp/
 ├── migrations/      # database migrations for the app
@@ -34,8 +62,9 @@ myapp/
 ├── apps.py          # app configuration
 ├── models.py        # database models for the app
 ├── tests.py         # tests for the app
+├── urls.py          # URL declarations for the app
 └── views.py         # view functions for the app
 ```
 
 ---
-CC BY-NC-SA 4.0 &copy; 2025 | [Antonio L. Martínez Trapote](https://github.com/antoniotrapote) 
+CC BY-NC-SA 4.0 &copy; 2025 | [Antonio L. Martínez Trapote](https://github.com/antoniotrapote)
