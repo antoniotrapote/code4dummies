@@ -1,5 +1,5 @@
 # code4dummies 📚
-[![CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc/4.0/)
+[![CC BY-NC-SA 4.0](https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 A collection of practical cheat sheets and beginner-friendly guides for developers learning the essentials — from terminal commands to Git, GitHub CLI, and other useful tools to get started in development.
 Each guide focuses on explaining the "why" behind every command, not just the "what."
@@ -32,6 +32,6 @@ These guides are living documents. If something is unclear or needs updating, pl
 
 ## ⚖️ License
 
-CC-BY-NC-4.0 &copy; 2025 | [Antonio L. Martínez Trapote](https://github.com/antoniotrapote) 
+CC BY-NC-SA 4.0 &copy; 2025 | [Antonio L. Martínez Trapote](https://github.com/antoniotrapote) 
 
 

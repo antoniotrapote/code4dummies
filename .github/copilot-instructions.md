@@ -25,8 +25,8 @@ Each guide focuses on explaining the "why" behind every command, not just the "w
 - Create aspirational content—document only what's actively used in this repo
 
 ## Licensing
-All content should be licensed under CC-BY-NC-4.0 unless otherwise specified.
+All content should be licensed under CC BY-NC-SA 4.0 unless otherwise specified.
 
 Include the following license footer in each new .md file:
 
-"CC-BY-NC-4.0 &copy; 2025 | [Antonio L. Martínez Trapote](https://github.com/antoniotrapote)"
+"CC BY-NC-SA 4.0 &copy; 2025 | [Antonio L. Martínez Trapote](https://github.com/antoniotrapote)"
