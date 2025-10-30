@@ -1,4 +1,5 @@
 # code4dummies 📚
+[![CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc/4.0/)
 
 Practical cheat sheets and beginner-friendly guides for developers learning **Git**, **GitHub CLI**, and **terminal commands**. Written to explain the "why" behind each command, not just the "what."
 
@@ -148,7 +149,7 @@ code4dummies/
 
 ## ⚖️ License
 
-CC-BY-4.0 &copy; 2025 | [Antonio L. Martínez Trapote](https://github.com/antoniotrapote) 
+CC-BY-NC-4.0 &copy; 2025 | [Antonio L. Martínez Trapote](https://github.com/antoniotrapote) 
 
 ---
 
