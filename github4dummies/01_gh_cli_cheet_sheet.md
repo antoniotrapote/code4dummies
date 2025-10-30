@@ -151,7 +151,9 @@ gh pr merge 23 --squash --delete-branch
 
 ```bash
 # Make a repo public or private
-gh repo edit my-repo --visibility public
+gh repo edit username/my-repo --visibility public \
+--accept-visibility-change-consequences 
+
 gh repo edit my-repo --visibility private
 
 # Add a description and topics
