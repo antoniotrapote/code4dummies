@@ -10,16 +10,16 @@ To create an app with Django, follow these steps:
 2. **Create a virtual environment**: It’s good practice to isolate project dependencies.
 
    ```bash
-   python -m venv env
+   python -m venv .venv
    ```
 3. **Activate the virtual environment**:
    - On Windows:
      ```bash
-     .\env\Scripts\activate
+     .\.venv\Scripts\activate
      ```
    - On macOS/Linux:
      ```bash
-     source env/bin/activate
+     source .venv/bin/activate
      ```        
 
 4. **Install Django**: Use pip to install Django in your virtual environment.
