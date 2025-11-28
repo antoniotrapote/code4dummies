@@ -71,7 +71,7 @@ gh repo create new-project-name --template username/project-template --private
 
 # 2. Clone your new project locally (for example, inside ~/Documents/projects/):
 cd ~/Documents/projects/
-git clone git@github.com:antoniotrapote/new-project-name.git
+gh repo clone username/new-project-name
 
 # 3. Create and activate a new virtual environment
 cd new-project-name
