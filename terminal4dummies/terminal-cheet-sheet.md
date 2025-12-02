@@ -59,6 +59,12 @@ head hello.txt       # first 10 lines
 tail hello.txt       # last 10 lines
 ```
 
+# Edit files
+```bash
+nano hello.txt       # edit file with nano text editor
+vim hello.txt        # edit file with vim text editor
+```
+
 # Search
 ```bash
 grep "Hello" hello.txt  # search for word in file
