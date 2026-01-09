@@ -59,3 +59,6 @@ Start the Django development server to ensure everything is set up correctly:
 python manage.py runserver
 ```
 If the server starts without errors, your PostgreSQL database is successfully set up for your Django project.
+
+---
+CC BY-NC-SA 4.0 &copy; 2025 | [Antonio L. Martínez Trapote](https://github.com/antoniotrapote) 
