@@ -36,7 +36,8 @@ kill    | (full word)                | Terminate a process
 pwd                # show where I am
 cd ~/Projects      # navigate to Projects folder in home directory
 cd ..              # go up one level
-ls -la             # list files, including hidden files and details
+ls -la             # list files, including hidden files and details 
+                   # -l : long format, -a : all files 
 ```
 
 # Create, copy, move, delete
@@ -48,6 +49,7 @@ cp hello.txt copy.txt       # copy file
 mv copy.txt renamed.txt     # rename/move file
 rm renamed.txt              # delete file
 rm -rf test                 # delete folder and all contents (careful!)
+                            # -r : recursive, -f : force
 ```
 
 # View contents
