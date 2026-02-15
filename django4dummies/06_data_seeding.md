@@ -5,7 +5,7 @@ Data seeding is the process of populating a database with initial data. This is 
 Data migrations allow you to add or modify data as part of a migration process.
 1. To create a data migration, you can use the `makemigrations` command with the `--empty` flag. For example, to create an empty migration for the `library` app, you would run the following command:
 ```bash
-python manage.py makemigrations library --empty -name seed_initial_data
+python manage.py makemigrations library --empty --name seed_initial_data
 ```
 This will create a new migration file in the `library/migrations` directory. 
 
@@ -66,3 +66,6 @@ To load a fixture into the database, you can use the `loaddata` management comma
 python manage.py loaddata library/fixtures/books.json
 ```
 This command will read the data from the `books.json` file and insert it into the database
+
+---
+CC BY-NC-SA 4.0 &copy; 2025 | [Antonio L. Martínez Trapote](https://github.com/antoniotrapote) 
