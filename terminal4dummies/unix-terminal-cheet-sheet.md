@@ -81,6 +81,8 @@ unzip file.zip -d ~/Destination
 history                           # recent commands
 clear                             # clear screen (Ctrl+L)
 man ls                            # manual for the ls command
+top -o mem                        # show processes sorted by memory usage
+                                  # -o : order by, mem : memory usage
 ```
 
 ---
